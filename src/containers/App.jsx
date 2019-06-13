@@ -8,8 +8,11 @@ import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 import Social from '../components/Social';
+import useGetData from '../hooks/useGetData';
 
-const App = () => (
+const App = () => {
+    const data = useGetData();
+
     return (
         <Main>
             <Sidebar>
@@ -20,10 +23,9 @@ const App = () => (
                 <Experience/>
                 <Certificates/>
                 <Skills/>
-                <Social/>
             </Info>
         </Main>
     );
-)
+}
 
 export default App;
