@@ -1,28 +1,29 @@
 //presentacional solo muestra 
 import React from 'react';
+import Social from './Social';
 
-const About = () => (
+const About = ({ avatar, name, profession, bio, address, social}) => (
     <div className="About">
         <div className="About-container">
             <div className="About-avatar">
                 <figure>
-                    <img src="" alt="Alfonso"/>
+                    <img src={avatar} alt={name}/>
                 </figure>
             </div>
             <div className="About-name">
-                <h2>Alfonso Rognoni</h2>
+                <h2>{name}</h2>
             </div>
             <div className="About-profession">
-                <p>FrontEnd Developer</p>
+                <p>{profession}</p>
             </div>
             <div className="About-desc">
-                <p>Soy desarrollador web lalalalalalala allala.</p>
+                <p>{bio}</p>
             </div>
             <div className="About-location">
-                <p>Rosario, Argentina.</p>
+                <p>{address}</p>
             </div>
             <div className="About-social">
-                <p>social</p>
+                <Social social={social} />
             </div>
         </div>
     </div>
